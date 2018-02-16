@@ -16,3 +16,12 @@ C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\EditordeGraf
 C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\EditordeGrafos\EditordeGrafos\obj\Debug\EditordeGrafos.Form1.resources
 C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\EditordeGrafos\EditordeGrafos\obj\Debug\EditordeGrafos.Properties.Resources.resources
 C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\EditordeGrafos\EditordeGrafos\obj\Debug\EditordeGrafos.csproj.GenerateResource.Cache
+C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\Editor_de_Grafos\EditordeGrafos\EditordeGrafos\bin\Debug\EditordeGrafos.exe.config
+C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\Editor_de_Grafos\EditordeGrafos\EditordeGrafos\obj\Debug\EditordeGrafos.exe
+C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\Editor_de_Grafos\EditordeGrafos\EditordeGrafos\obj\Debug\EditordeGrafos.pdb
+C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\Editor_de_Grafos\EditordeGrafos\EditordeGrafos\bin\Debug\EditordeGrafos.exe
+C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\Editor_de_Grafos\EditordeGrafos\EditordeGrafos\bin\Debug\EditordeGrafos.pdb
+C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\Editor_de_Grafos\EditordeGrafos\EditordeGrafos\obj\Debug\EditordeGrafos.csprojResolveAssemblyReference.cache
+C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\Editor_de_Grafos\EditordeGrafos\EditordeGrafos\obj\Debug\EditordeGrafos.Form1.resources
+C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\Editor_de_Grafos\EditordeGrafos\EditordeGrafos\obj\Debug\EditordeGrafos.Properties.Resources.resources
+C:\Users\efrai\Desktop\Schneider456\Universidad\6to Semestre\Grafos\Editor_de_Grafos\EditordeGrafos\EditordeGrafos\obj\Debug\EditordeGrafos.csproj.GenerateResource.Cache

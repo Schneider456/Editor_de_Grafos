@@ -302,8 +302,19 @@ namespace EditordeGrafos {
         int dx, dy;
         bool presionado2 = false;
         string movido = "";
+        string origen = "";
+        int xo, yo;
         private void Form1_MouseDown(object sender, MouseEventArgs e) {
             if (nuevoAri) {
+                /*foreach(Vertice v in grafos[0].Vertices) {
+                    numArista++;
+                    if (e.X > v.X - 35 && e.X < v.X + 35 && e.Y > v.Y - 35 && e.Y < v.Y + 35) {
+                        origen = v.Nombre;
+                        xo = v.X;
+                        yo = v.Y;
+                        clicado = true;
+                    }
+                }*/
                 for (int i = 0; i < grafos[0].Vertices.Count; i++) {
                     if (e.X > grafos[0].Vertices[i].X - 35 && e.X < grafos[0].Vertices[i].X + 35 && e.Y > grafos[0].Vertices[i].Y - 35 && e.Y < grafos[0].Vertices[i].Y + 35) {
                         Arista arista = new Arista();
@@ -399,8 +410,28 @@ namespace EditordeGrafos {
             Invalidate();
         }
 
+        string destino = "";
+        int xf, yf;
         private void Form1_MouseUp(object sender, MouseEventArgs e) {
             if (nuevoAri) {
+                /*foreach(Vertice v in grafos[0].Vertices) {
+                    if (origen == v.Nombre) {
+                        Arista arista = new Arista();
+                        v.Aristas.Add(arista);
+                        v.Aristas[v.Aristas.Count - 1].Origen = origen;
+                        v.Aristas[v.Aristas.Count - 1].X = xo;
+                        v.Aristas[v.Aristas.Count - 1].Y = yo;
+                        v.Aristas[v.Aristas.Count - 1].Tipo = grafos[0].Tipo;
+
+                    }
+                }
+                foreach (Vertice v in grafos[0].Vertices) {
+                    if (e.X > v.X - 35 && e.X < v.X + 35 && e.Y > v.Y - 35 && e.Y < v.Y + 35) {
+                        destino = v.Nombre;
+                        xf = v.X;
+                    }
+                }*/
+
                 for (int i = 0; i < grafos[0].Vertices.Count; i++) {
                     if (e.X > grafos[0].Vertices[i].X - 35 && e.X < grafos[0].Vertices[i].X + 35 && e.Y > grafos[0].Vertices[i].Y - 35 && e.Y < grafos[0].Vertices[i].Y + 35) {
                         grafos[0].Vertices[numArista].Aristas[grafos[0].Vertices[numArista].Aristas.Count - 1].Destino = grafos[0].Vertices[i].Nombre;
@@ -412,6 +443,8 @@ namespace EditordeGrafos {
                     }
                 }
             }
+            origen = "";
+            xo = yo = 0;
             if (mueveVer) {
                 mueveVer = false;
                 presionado = false;
@@ -430,7 +463,7 @@ namespace EditordeGrafos {
         string nombreArchivo = "";
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e) {
             SaveFileDialog guardar = new SaveFileDialog();
-            if (!guardado && !abierto) {
+            //if (!guardado && !abierto || guardado) {
                 if (guardar.ShowDialog() == DialogResult.OK) {
                     Stream stream = File.Open(guardar.FileName, FileMode.Create);
                     nombreArchivo = guardar.FileName;
@@ -439,27 +472,27 @@ namespace EditordeGrafos {
                     guardado = true;
                     return;
                 }
-            }
-            if (guardado) {
+            //}
+            /*if (guardado) {
                 Stream stream = File.Open(nombreArchivo, FileMode.Create);
                 BinaryFormatter binary = new BinaryFormatter();
                 binary.Serialize(stream, grafos);
                 guardado = true;
 
-            }
+            }*/
         }
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e) {
             OpenFileDialog abrir = new OpenFileDialog();
-            if ((guardado && !abierto) || (guardado && abierto)) {
+            //if ((guardado && !abierto) || (guardado && abierto)) {
                 grafos.Clear();
                 if(abrir.ShowDialog() == DialogResult.OK) {
-                    Stream stream = File.Open(nombreArchivo, FileMode.Open);
+                    Stream stream = File.Open(abrir.FileName, FileMode.Open);
                     BinaryFormatter binary = new BinaryFormatter();
                     grafos = (List<Grafo>)binary.Deserialize(stream);
                 }
-            }
-            if (!guardado) {
+            //}
+            /*if (!guardado) {
                 grafos.Clear();
                 if (abrir.ShowDialog() == DialogResult.OK) {
                     Stream stream = File.Open(abrir.FileName, FileMode.Open);
@@ -469,7 +502,7 @@ namespace EditordeGrafos {
                     grafos = (List<Grafo>)binary.Deserialize(stream);
                 }
                 abierto = true;
-            }
+            }*/
             agregarVérticeToolStripMenuItem.Enabled = true;
             eliminarVérticeToolStripMenuItem.Enabled = true;
             agregarAristaToolStripMenuItem.Enabled = true;
